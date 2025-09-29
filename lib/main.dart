@@ -10,6 +10,10 @@ final userProvider = StateNotifierProvider<UserNotifier, User>(
   (ref) => UserNotifier(),
 );
 
+final userChangeNotifierProvider = ChangeNotifierProvider(
+  (ref) => UserNotifierChange(),
+);
+
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
